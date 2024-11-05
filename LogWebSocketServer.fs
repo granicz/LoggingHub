@@ -19,7 +19,7 @@ let LogCounter = ref 0
  * Send a log message to all listening clients. 
  *)
 let Log (msg: string) =
-    !Clients
+    Clients.Value
     |> List.iter (fun (ip, client: WebSocketClient<S2CMessage, C2SMessage>) ->
         LogCounter.Value <- LogCounter.Value + 1
         client.Post (S2CMessage.LogMessage(LogCounter.Value, msg))

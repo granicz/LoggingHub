@@ -18,8 +18,6 @@ module Client =
         Templates.MainTemplate.MainForm()
             .OnSend(fun e ->
                 async {
-                    LogWebSocketServer.Log <| sprintf "Logging %s" e.Vars.TextToReverse.Value
-                    //logger.Info ...
                     let! res = Server.DoSomething e.Vars.TextToReverse.Value
                     rvReversed := res
                 }
