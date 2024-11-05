@@ -45,4 +45,4 @@ let LogViewer (endpoint: WebSocketEndpoint<Server.S2CMessage, Server.C2SMessage>
     container
 
 let MyEndPoint (url: string) : WebSocketEndpoint<Server.S2CMessage, Server.C2SMessage> = 
-    WebSocketEndpoint.Create(url, "/ws")
+    WebSocketEndpoint.Create(url, "/logws")
