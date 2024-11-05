@@ -1,0 +1,7 @@
+bin
+obj
+Scripts
+.vs
+*.suo
+node_modules
+websharper.log
